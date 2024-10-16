@@ -76,12 +76,12 @@
 
 import subprocess
 
-def merge_devlop(source_branch, target_branch):
+def merge_devlop():
     subprocess.run(["git", "fetch", "--all"])
-    subprocess.run(["git", "checkout", target_branch,])
+    subprocess.run(["git", "checkout", "develop"])
     subprocess.run(["git", "fetch", "origin"])
-    subprocess.run(["git", "merge", source_branch])
-    subprocess.run(["git", "push", "-u", "origin", target_branch])
+    subprocess.run(["git", "merge", "origin/main"])
+    subprocess.run(["git", "push", "-u", "origin/develop"])
     #     run_git_command(['git', 'checkout', target_branch, '-v'])
 
 #     print(f"Ensuring {source_branch} exists locally...")
@@ -99,4 +99,4 @@ if __name__ == "__main__":
     develop_branch = 'develop'
     rc_branch = 'release-candidate'
 
-    merge_devlop(main_branch, develop_branch)
+    merge_devlop()
