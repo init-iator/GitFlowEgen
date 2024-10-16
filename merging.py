@@ -97,7 +97,7 @@ def merge_branch(source_branch, target_branch):
     ensure_branch_exists(source_branch)
 
     print(f"Merging {source_branch} into {target_branch}...")
-    run_git_command(['git', 'merge', 'origin', source_branch, '--allow-unrelated-histories',])
+    run_git_command(['git', 'merge', f'origin/{source_branch}', '--allow-unrelated-histories'])
 
     print(f"Successfully merged {source_branch} into {target_branch}.")
 
