@@ -80,7 +80,7 @@ def merge_devlop():
     subprocess.run(["git", "fetch", "--all"])
     subprocess.run(["git", "checkout", "develop"])
     subprocess.run(["git", "fetch", "origin"])
-    subprocess.run(["git", "merge", "origin/main"])
+    subprocess.run(["git", "merge", "origin/main", "--allow-unrelated-histories"])
     subprocess.run(["git", "push", "-u", "origin/develop"])
     #     run_git_command(['git', 'checkout', target_branch, '-v'])
 
