@@ -79,7 +79,7 @@ import subprocess
 def merge_devlop(source_branch, target_branch):
     subprocess.run(["git", "fetch", "--all"])
     subprocess.run(["git", "checkout", target_branch,])
-    subprocess.run(["git", "merge", source_branch])
+    subprocess.run(["git", "merge", "origin", source_branch])
     subprocess.run(["git", "push", "-u", "origin", target_branch])
     #     run_git_command(['git', 'checkout', target_branch, '-v'])
 
