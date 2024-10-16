@@ -45,7 +45,7 @@ def create_and_merge_rc_branch(source_branch, rc_branch):
     print(f"Successfully merged {source_branch} into {rc_branch}.")
 
 def main():
-    main_branch = 'main'
+    main_branch = 'origin/main'
     develop_branch = 'develop'
     rc_branch = 'release-candidate'
 
