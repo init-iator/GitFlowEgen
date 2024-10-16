@@ -21,7 +21,7 @@ def genrelease(new_version):
     update_version_file(new_version)
     subprocess.run(["git", "add", ".",])
     subprocess.run(["git", "commit", "-m", f"relese-{new_version}"])
-    subprocess.run(["git", "push"])
+    subprocess.run(["git", "push", "-u", "origin", f"release-{new_version}"])
 
 def update_version_file(new_version):
     with open('version.txt', 'w') as f:
