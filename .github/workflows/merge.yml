@@ -45,4 +45,5 @@ jobs:
           git remote set-url origin https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}.git
 
       - name: run merging
-        run: python /home/runner/work/GitFlowEgen/GitFlowEgen/merging.py
+        run: |
+          python merging.py
