@@ -44,5 +44,5 @@ jobs:
           git config --global user.email emuhnas1@hotmail.com
           git remote set-url origin https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}.git
 
-      - name: running pwd
-        run: pwd
+      - name: run versioning
+        run: python /home/runner/work/GitFlowEgen/GitFlowEgen/versioning.py
