@@ -17,10 +17,10 @@ def increment_version(version):
     return new_version
 
 def genrelease(new_version):
-    subprocess.run(["git", "checkout", "-b", f"relese-{new_version}"])
+    subprocess.run(["git", "checkout", "-b", f"release-{new_version}"])
     update_version_file(new_version)
     subprocess.run(["git", "add", ".",])
-    subprocess.run(["git", "commit", "-m", f"relese-{new_version}"])
+    subprocess.run(["git", "commit", "-m", f"release-{new_version}"])
     subprocess.run(["git", "push", "--set-upstream", "origin", f"release-{new_version}"])
 
 def update_version_file(new_version):
