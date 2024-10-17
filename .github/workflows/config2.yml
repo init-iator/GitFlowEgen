@@ -45,4 +45,4 @@ jobs:
           git remote set-url origin https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}.git
 
       - name: run versioning
-        run: python /home/runner/work/GitFlowEgen/GitFlowEgen/versioning.py
+        run: python /home/runner/work/GitFlowEgen/GitFlowEgen/versioning2.py
