@@ -81,7 +81,7 @@ def merge_devlop():
     subprocess.run(["git", "checkout", "develop"])
     subprocess.run(["git", "fetch", "origin"])
     subprocess.run(["git", "merge", "origin/main", "--allow-unrelated-histories"])
-    subprocess.run(["git", "push", "-u", "origin/develop"])
+    subprocess.run(["git", "push",]) #"-u", "origin/develop"])
     #     run_git_command(['git', 'checkout', target_branch, '-v'])
 
 #     print(f"Ensuring {source_branch} exists locally...")
