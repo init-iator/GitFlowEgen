@@ -19,12 +19,12 @@ jobs:
         run: |
             git checkout develop
             git pull
-            git merge main
+            git merge origin main
             git push
 
       - name: Merge main to release-candidate
         run: |
           git checkout release-candidate
           git pull
-          git merge main
+          git merge origin main
           git push
